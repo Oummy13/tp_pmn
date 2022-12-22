@@ -15,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
   
     ngOnInit(): void {
       this.galleries = [
+
         "https://picsum.photos/id/27/367/267",
         "https://picsum.photos/id/27/367/267",
         "https://picsum.photos/id/11/367/267",
@@ -26,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
         
       ],
       this.states = [
-        "Sydney","Rio", "Cusco", "New Delhi", "Hong Kong", "Katmandou",  "Katmandou",
+        "Sydney","Rio", "Cusco", "New Delhi", "Hong Kong", "Katmandou",  "Katmandou",'Rio'
       ]
     }
 }
