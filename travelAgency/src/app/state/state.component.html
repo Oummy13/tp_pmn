@@ -3,35 +3,8 @@
     <div class="flex-col">
       <img class="mb-6 object-cover w-full h-65 md:h-96" src="https://picsum.photos/id/57/2448/3264">
       <div class="grid grid-cols-4 gap-4">
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/27/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/11/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/17/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/20/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/52/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/54/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/58/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/24/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/38/367/267">
-        </div>
-        <div>
-          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="https://picsum.photos/id/46/367/267">
+        <div *ngFor="let photo of gallery">
+          <img class="object-cover w-full h-86 md:h-auto md:w-64" src="{{photo}}">
         </div>
       </div>
     </div>
@@ -76,37 +49,16 @@
 
     <div class="mt-10 mb-6 text-center text-2xl font-bold text-gray-600">You may also like</div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="mb-6 relative w-full overflow-hidden">
-        <img class="object-cover h-60 w-full transition duration-500 hover:scale-125" src="https://picsum.photos/id/37/367/267" alt="image description">
-        <span class="absolute text-3xl text-orange-600 top-1 ml-6 font-bold">Katmandou</span>
+      <div class="mb-6 relative w-full overflow-hidden" *ngFor="let hotel of destinations">
+        <input type="hidden" value="{{hotel.id}}"/>
+        <img class="object-cover h-60 w-full transition duration-500 hover:scale-125" src="{{hotel.image}}" alt="image description">
+        <span class="absolute text-3xl text-orange-600 top-1 ml-6 font-bold">{{hotel.city}}</span>
         <div class="absolute text-xl bottom-1 ml-6 flex flex-col">
-          <span class="text-yellow-300 font-bold ">Hotel Calypso</span>
-          <span class="text-yellow-300  italic">1 week</span>
+          <span class="text-yellow-300 font-bold ">{{hotel.name}}</span>
+          <span class="text-yellow-300  italic">{{hotel.duration}}</span>
         </div>
         <div class="absolute rounded text-xl bottom-1 py-2 px-2 mb-6 right-1 bg-orange-300">
-          <span class="text-black font-bold">150€</span>
-        </div>
-      </div>
-      <div class="mb-6 relative w-full overflow-hidden">
-        <img class="object-cover h-60 w-full transition duration-500 hover:scale-125" src="https://picsum.photos/id/61/367/267" alt="image description">
-        <span class="absolute text-3xl text-orange-600 top-1 ml-6 font-bold">Tokyo</span>
-        <div class="absolute text-xl bottom-1 ml-6 flex flex-col">
-          <span class="text-yellow-300 font-bold ">Hotel Calypso</span>
-          <span class="text-yellow-300  italic">1 week</span>
-        </div>
-        <div class="absolute rounded text-xl bottom-1 py-2 px-2 mb-6 right-1 bg-orange-300">
-          <span class="text-black font-bold">150€</span>
-        </div>
-      </div>
-      <div class="mb-6 relative w-full overflow-hidden">
-        <img class="object-cover h-60 w-full transition duration-500 hover:scale-125" src="https://picsum.photos/id/49/367/267" alt="image description">
-        <span class="absolute text-3xl text-orange-600 top-1 ml-6 font-bold">Lisbonne</span>
-        <div class="absolute text-xl bottom-1 ml-6 flex flex-col">
-          <span class="text-yellow-300 font-bold ">Hotel Calypso</span>
-          <span class="text-yellow-300  italic">1 week</span>
-        </div>
-        <div class="absolute rounded text-xl bottom-1 py-2 px-2 mb-6 right-1 bg-orange-300">
-          <span class="text-black font-bold">150€</span>
+          <span class="text-black font-bold">{{hotel.price}}€</span>
         </div>
       </div>
     </div>
