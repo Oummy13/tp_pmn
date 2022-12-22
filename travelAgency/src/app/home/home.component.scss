@@ -1,0 +1,128 @@
+@import '../../styles.scss';
+
+#main{
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    article{
+        background-color: $blue;
+        // width: 60%;
+        flex: 2.1;
+        // margin: auto;
+        margin-right: 10px;
+
+        form{
+            color: #fff;
+            position: relative;
+
+            #btn-find{
+                background-color: $orange;
+                position: absolute;
+                right: 0;
+                bottom: -20px;
+            }
+        }
+    }
+    aside{
+        color: $black;
+        flex: 1;
+        // width: 40%;
+        // height: 50vh;
+        background-image: url('https://picsum.photos/seed/picsum/500/400');
+        background-repeat: no-repeat;
+        padding: 5px 5px 5px 15px;
+        position: relative;
+
+        h2{
+            margin-top: 5px;
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+        .down{
+            line-height: 1.5;
+            position: absolute;
+            bottom: 20px;
+            h1{
+                font-weight: 700;
+                font-size: 2em;
+            }
+            p{
+                font-weight: 500;
+            }
+        }
+        .bg-price{
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            background-color: $yellow;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+    }
+
+
+}
+
+
+
+#gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    .gallery{
+        width: 25%;
+        padding: 5px 5px 5px 15px;
+        position: relative;
+        .gallery-content{
+            z-index: 9999;
+            h2{
+                position: absolute;
+                top: 0;
+                z-index: 9999;
+                font-weight: 500;
+                font-size: 1.5em;
+                color: $orange;
+            }
+            .gallery-text{
+                line-height: 1.5;
+                position: absolute;
+                bottom: 50px;
+                
+                h1{
+                    font-weight: 700;
+                    font-size: 2em;
+                }
+                p{
+                    font-weight: 500;
+                }
+            }
+            .bg-price{
+                position: absolute;
+               top: 0;
+                right: 0;
+                width: 60px;
+                height: 30px;
+                text-align: center;
+                background-color: $yellow;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+            
+        }
+        
+    }
+
+
+}
+
+
