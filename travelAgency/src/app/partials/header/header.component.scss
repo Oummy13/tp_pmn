@@ -3,6 +3,7 @@
 #title, nav a{
     color: $blue;
 }
-#link-home{
-    color: $orange;
+
+.active-link{
+    color: $orange !important;
 }
