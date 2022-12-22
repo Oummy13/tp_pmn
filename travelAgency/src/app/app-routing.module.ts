@@ -5,8 +5,9 @@ import { StateComponent } from './state/state.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },{ path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: 'state-component', component: StateComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: 'state', component: StateComponent },
 ];
 
 @NgModule({
